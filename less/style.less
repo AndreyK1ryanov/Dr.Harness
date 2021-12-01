@@ -29,17 +29,22 @@ button, a{
     font-weight: 700;
     text-align: center;
 }
-.line-under-header{
-    margin: 0px auto;
-    margin-top: 30px;
-    max-height: 0px;
-}
 @media (max-width: 480px) {
     .header{
-        h2{
-            font-size: 30px;
-        }
+        font-size: 30px;
     }
+}
+.line-under-header{
+    margin: 0 auto;
+    width: 90px;
+    margin-top: 30px;
+    background: @wordBlack;
+    max-height: 0px;
+    border: 2px solid @wordBlack;
+}
+.title{
+    font-size: 16px;
+    line-height: 30px
 }
 .price{
     font-weight: 700;
@@ -318,7 +323,10 @@ button, a{
         font-weight: 700;
         line-height: 90px;
     }
-    &__under-header-line{
+    &__line-under-header{
+        margin: 0px auto;
+        margin-top: 30px;
+        max-height: 0px;
         margin-bottom: 20px;
         background: @wordWhite;
         width: 400px;
@@ -398,59 +406,46 @@ button, a{
 
 
 //---------------------------info_block - start-----------------------//
-.info_block{
-    &__title{
-        margin-bottom: 10px;
-        .header{
-            margin-bottom: 30px;
-        }
-        text-align: center;
-        p{
-            font-size: 16px;
-            line-height: 30px;
-        }
-    }
-    &-table{
-        background: url('../pictures/spec_form/spec_form_background.webp');
-        &__container{
-            padding-bottom: 80px;
-            display: grid;
-            justify-content : center;
-            table{
-                background: #fff;
-                box-shadow: 0px 0px 50px -23px #707070;
-                padding: 30px;
-            }
-            td{
-                text-align: center;
-                padding: 15px 25px;
-                font-size: 16px;
-            }
-            tr:nth-child(2n+1){
-                background:#F3F3F3;
-            }
-            tr:nth-child(2n+2){
-                background:white; 
-            }
-        }
-        &__header{
-            padding-bottom: 15px;
-        }
-    }
+.about-product{
+    margin-bottom: 10px;
+    text-align: center;
 }
-.size_type{
-    text-align: left !important;
+.size-table-block{
+    background: url('../pictures/spec_form/spec_form_background.webp');
+    &__container{
+        padding-bottom: 60px;
+        display: grid;
+        justify-content : center;
+    }
+    &__body{
+        margin: 30px 0px;
+        background: #fff;
+        box-shadow: 0px 0px 50px -23px #707070;
+        padding: 30px;
+    }
+    &__row{
+        text-align: center;
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+    &__columun:nth-child(2n+1){
+        background:#F3F3F3;
+    }
+    &__columun:nth-child(2n+2){
+        background:white; 
+    }
+    &__row:nth-child(1){
+        text-align: left !important;
+    }
 }
 //adptation-start
 @media (max-width: 970px) {
-    .info_block{
-        &-table{
-                &__content{
-                    overflow: scroll;
-                }
-            }
+    .size-table-block{
+        &__content{
+            overflow: scroll;
         }
     }
+}
 //adptation-finish
 //---------------------------info_block - finish-----------------------//
 

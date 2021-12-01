@@ -21,15 +21,22 @@ a {
   font-weight: 700;
   text-align: center;
 }
-.line-under-header {
-  margin: 0px auto;
-  margin-top: 30px;
-  max-height: 0px;
-}
 @media (max-width: 480px) {
-  .header h2 {
+  .header {
     font-size: 30px;
   }
+}
+.line-under-header {
+  margin: 0 auto;
+  width: 90px;
+  margin-top: 30px;
+  background: #1e1e1e;
+  max-height: 0px;
+  border: 2px solid #1e1e1e;
+}
+.title {
+  font-size: 16px;
+  line-height: 30px;
 }
 .price {
   font-weight: 700;
@@ -289,7 +296,10 @@ a {
   font-weight: 700;
   line-height: 90px;
 }
-.promo__under-header-line {
+.promo__line-under-header {
+  margin: 0px auto;
+  margin-top: 30px;
+  max-height: 0px;
   margin-bottom: 20px;
   background: #ffffff;
   width: 400px;
@@ -352,52 +362,43 @@ a {
     display: none;
   }
 }
-.info_block__title {
+.about-product {
   margin-bottom: 10px;
   text-align: center;
 }
-.info_block__title .header {
-  margin-bottom: 30px;
-}
-.info_block__title p {
-  font-size: 16px;
-  line-height: 30px;
-}
-.info_block-table {
+.size-table-block {
   background: url('../pictures/spec_form/spec_form_background.webp');
 }
-.info_block-table__container {
-  padding-bottom: 80px;
+.size-table-block__container {
+  padding-bottom: 60px;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.info_block-table__container table {
+.size-table-block__body {
+  margin: 30px 0px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 50px -23px #707070;
           box-shadow: 0px 0px 50px -23px #707070;
   padding: 30px;
 }
-.info_block-table__container td {
+.size-table-block__row {
   text-align: center;
   padding: 15px 25px;
   font-size: 16px;
 }
-.info_block-table__container tr:nth-child(2n+1) {
+.size-table-block__columun:nth-child(2n+1) {
   background: #F3F3F3;
 }
-.info_block-table__container tr:nth-child(2n+2) {
+.size-table-block__columun:nth-child(2n+2) {
   background: white;
 }
-.info_block-table__header {
-  padding-bottom: 15px;
-}
-.size_type {
+.size-table-block__row:nth-child(1) {
   text-align: left !important;
 }
 @media (max-width: 970px) {
-  .info_block-table__content {
+  .size-table-block__content {
     overflow: scroll;
   }
 }

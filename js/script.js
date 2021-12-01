@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //-------------------------slick slider - start---------------------------//
-    $('.info_block__slider').slick({
+    $('.product-slider').slick({
         slidesToShow: 15,
         slidesToScroll: 3,
         autoplay: false,
