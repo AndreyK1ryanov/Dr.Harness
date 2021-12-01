@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
                 <button class="mobile-control__open-button mobile-control__open-button_deactivate">&#8801;</button>
                 <button class="mobile-control__close-button mobile-control__close-button_deactivate">&#215;</button>
             </div>
-            <nav class="header-menu-navigation header-menu-navigation_desktop">
+            <nav class="header-menu-navigation header-menu-navigation_mobile-deactivate">
                 <ul class="header-menu-navigation__list">
                     <li class="header-menu-navigation__item"><a class="header-menu-navigation__link"
                             href="#anchor_catalog">КАТАЛОГ</a></li>
@@ -48,31 +48,31 @@
                 <img src="pictures/catalog/catalog_item2.webp" alt="" class="pop-up__product-img">
             </div>
             <div class="pop-up__product">
-                <div class="pop-up__product-close">
-                    <button></button>
+                <div class="pop-up__product-button-block pop-up__product-button-block_close">
+                    <button class="pop-up__product-close-button"></button>
                 </div>
                 <div class="pop-up__product-name">
-                    <p>Портупея “Джони Миллер”</p>
+                    Портупея “Джони Миллер”
                 </div>
                 <div class="pop-up__product-price">
-                    <p class="pop-up__product-price_old">4990 р.</p>
-                    <p class="pop-up__product-price_new">2990 р.</p>
+                    <p class="pop-up__price-old price-old">4990 р.</p>
+                    <p class="pop-up__price-new price-new">2990 р.</p>
                 </div>
                 <div class="pop-up__product-info">
                     <select class="pop-up__product-size">
-                        <option value=”XS”>XS</option>
-                        <option value=”S”>S</option>
-                        <option value=”M”>M</option>
-                        <option value=”L”>L</option>
-                        <option value=”XL”>XL</option>
-                        <option value=”XXL”>XXL</option>
+                        <option class="pop-up__product-size-selected" value=”XS”>XS</option>
+                        <option class="pop-up__product-size-selected" value=”S”>S</option>
+                        <option class="pop-up__product-size-selected" value=”M”>M</option>
+                        <option class="pop-up__product-size-selected" value=”L”>L</option>
+                        <option class="pop-up__product-size-selected" value=”XL”>XL</option>
+                        <option class="pop-up__product-size-selected" value=”XXL”>XXL</option>
                     </select>
-                    <input type="name" name="" id="client_name" placeholder="Введите ваше имя">
-                    <input type="tel" name="" id="client_phone" placeholder="Введите ваш телефон">
+                    <input type="name" name="" class="pop-up__client-info" placeholder="Введите ваше имя">
+                    <input type="tel" name="" class="pop-up__client-info" placeholder="Введите ваш телефон">
                 </div>
 
-                <div class="pop-up__product-buy">
-                    <button>ОФОРМИТЬ ЗАКАЗ</button>
+                <div class="pop-up__product-button-block pop-up__product-button-block_buy">
+                    <button class="pop-up__product-button-buy">ОФОРМИТЬ ЗАКАЗ</button>
                 </div>
             </div>
         </div>
@@ -89,14 +89,12 @@
             <div class="promo__image">
                 <img class="promo__image-two" src="pictures/promo/girl_two.webp" alt="">
             </div>
-            <div class="promo__title">
-                <p>Женские кожаные портупеи</p>
-                <h1>Dr.Harness</h1>
-                <hr>
-            </div>
-            <div class="promo__subtitle">
-                <p>ЛЮБАЯ МОДЕЛЬ СО СКИДКОЙ 50%</p>
-                <p><b>всего за <span>2990р.</span></b></p>
+            <div class="promo__info">
+                <p class="promo__title">Женские кожаные портупеи</p>
+                <h1 class="promo__main-header">Dr.Harness</h1>
+                <hr class="promo__under-header-line line-under-header">
+                <p class="promo__title">ЛЮБАЯ МОДЕЛЬ СО СКИДКОЙ 50%</p>
+                <p class="promo__title"><b>всего за <span>2990р.</span></b></p>
             </div>
             <div class="promo__button">
                 <a href="#anchor_catalog" id="promo_everyday_button">ПОВСЕДНЕВНЫЕ ПОРТУПЕИ</a>

@@ -22,21 +22,17 @@ button, a{
     margin: 0 auto;
 }
 .header{
-    h2{
-        padding-top: 35px;
-        color: @wordBlack;
-        font-size: 36px;
-        line-height: 36px;
-        font-weight: 700;
-        text-align: center;
-    }
-    hr{
-        width: 90px;
-        margin-top: 30px;
-        background: @wordBlack;
-        max-height: 0px;
-        border: 2px solid @wordBlack;
-    }
+    padding-top: 35px;
+    color: @wordBlack;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.line-under-header{
+    margin: 0px auto;
+    margin-top: 30px;
+    max-height: 0px;
 }
 @media (max-width: 480px) {
     .header{
@@ -45,6 +41,20 @@ button, a{
         }
     }
 }
+.price{
+    font-weight: 700;
+    &-new{
+        color: @accentPink;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    &-old{
+        text-decoration: line-through;
+        color: #8C8C8C;
+        font-size: 24px;
+    }
+}
+
 //------------------------global style - finish----------------------//
 
 
@@ -92,18 +102,24 @@ button, a{
 }
 
 //adaptation-start
-@media (max-width: 970px) {
+@media (max-width: 940px) {
     .header-menu{
         display: block;
         &__container{
             display: grid;
-            align-items: left;
             margin: 0px;
             max-width: none;
         }
     } 
     .header-menu-navigation{
-        display: none;
+        &_mobile{
+            &-deactivate{
+                display: none;
+            }
+            &-activate{
+                display: block;
+            }
+        }
         grid-column-start: 1;
         grid-column-end: 3;
         text-align: center;
@@ -133,13 +149,18 @@ button, a{
             background: none;
             border: none;
             font-size: 50px;
+            &_deactivate{
+                display: none;
+            }
         }
         &__close-button{
-            display: none;
             margin: 0px 15px;
             background: none;
             border: none;
             font-size: 50px;
+            &_deactivate{
+                display: none;
+            }
         }
     }
 }
@@ -175,15 +196,20 @@ button, a{
         margin: 0px auto;
     }
     &__product{
-        &-close{
-            text-align: right !important;
-            margin: 10px 10px 0px 10px;
-            button{
-                background: url(../pictures/pop-up/pop-up_cancel.webp) no-repeat;
-                width: 13px;
-                height: 13px;
-                border: none;
+        &-button-block{
+            margin: 10px;
+            &_buy{
+                text-align: center;
             }
+            &_close{
+                text-align: right;
+            }
+        }
+        &-close-button{
+            background: url(../pictures/pop-up/pop-up_cancel.webp) no-repeat;
+            width: 13px;
+            height: 13px;
+            border: none;
         }
         &-name{
             text-align: center;
@@ -194,62 +220,46 @@ button, a{
             text-align: center;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            line-height: 36px;
             padding: 10px 35px;
-            &_new{
-                color: @accentPink;
-                font-size: 30px;
-                font-weight: 700;
-                line-height: 36px;
-            }
-            &_old{
-                text-decoration: line-through;
-                color: #8C8C8C;
-                font-size: 24px;
-                line-height: 40px;
-            }
         }
         &-info{
             display: grid;
             justify-items: center;
             grid-gap: 10px;
             ::-webkit-input-placeholder { text-align: center; }
-            select{
-                text-align: center;
-                width: 286px;
-                height: 43px;
-                border: 1px solid #CECED3;
-                font-size: 16px;
-            }
-            input{
-                padding: 0px 10px;
-                width: 264px;
-                height: 43px;
-                border: 1px solid #CECED3;
-                font-size: 16px;
-            }
         }
-        &-buy{
+        &-size{
             text-align: center;
-            padding-bottom: 25px;
-            margin-top: 10px;
-            button{
-                padding: 15px 50px;
-                background: @buyButton;
-                color: @wordWhite;
-                font-size: 18px;
-                font-weight: 300;
-                border: none;
-                border-radius: 5px;
-                border-bottom: 4px solid #375CB2;
-            }
-            button:hover{
-                border-bottom: 4px solid #264792;
-            }
-            button:active{
-                border-bottom: 4px solid #264792;
-                box-shadow: 0px 5px 20px -9px #264792;
-            }
+            width: 286px;
+            height: 43px;
+            border: 1px solid #CECED3;
+            font-size: 16px;
         }
+        &-button-buy{
+            padding: 15px 50px;
+            background: @buyButton;
+            color: @wordWhite;
+            font-size: 18px;
+            font-weight: 300;
+            border: none;
+            border-radius: 5px;
+            border-bottom: 4px solid #375CB2;
+            }
+        &-button-buy:hover{
+            border-bottom: 4px solid #264792;
+        }
+        &-button-buy:active{
+            border-bottom: 4px solid #264792;
+            box-shadow: 0px 5px 20px -9px #264792;
+        }
+    }
+    &__client-info{
+        padding: 0px 10px;
+        width: 264px;
+        height: 43px;
+        border: 1px solid #CECED3;
+        font-size: 16px;
     }
 }
 //adaptation-start
@@ -263,15 +273,12 @@ button, a{
         &__product{
             background: #fff;
         }
-    }
-}
-@media (max-height: 850px) {
-    .pop-up{
         &__image{
             display: none;
         }
     }
-    }
+}
+
 //adaptation-finish
 //-----------------------------pop-up - finish------------------------//
 
@@ -298,40 +305,24 @@ button, a{
             z-index: 1;
         }
     }
-    &__title{
-        padding-top: 70px;
-        padding-bottom: 40px;
-        p{
-            font-size: 34px;
-            font-weight: 300;
-        }
-        h1{
-            font-size: 82px;
-            font-weight: 700;
-            line-height: 90px;
-        }
-        hr{
-            margin-top: 20px;
-            background: @wordWhite;
-            width: 450px;
-            max-height: 0px;
-            border: 2px solid white;
-        }
+    &__info{
+        padding-top: 50px;
     }
-    &__subtitle{
-        p{
-            font-size: 24px;
-            font-weight: 400px;
-            line-height: 26px;
-            b{
-                font-size: 36px;
-                line-height: 48px;
-                span{
-                    font-size: 50px;
-                    line-height: 80px;
-                }
-            }
-        }
+    &__title{
+        font-size: 30px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+    &__main-header{
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 90px;
+    }
+    &__under-header-line{
+        margin-bottom: 20px;
+        background: @wordWhite;
+        width: 400px;
+        border: 2px solid white;
     }
     &__button{
         padding-top: 35px;
@@ -356,6 +347,13 @@ button, a{
         background-size: cover;
     }
 }
+@media (max-width: 940px) {
+    .promo{
+        &__title{
+            font-size: 22px;
+        }
+    }    
+}
 @media (max-width: 720px) {
     .promo{
         &__image{
@@ -369,27 +367,13 @@ button, a{
             }
         }
         &__title{
-            p{
-                font-size: 20px;
-            }
-            h1{
-                font-size: 45px;
-            }
-            hr{
-                width: 240px;
-            }
+            font-size: 20px;
         }
-        &__subtitle{
-            p{
-                font-size: 13px;
-                line-height: 0px;
-                b{
-                    font-size: 19px;
-                    span{
-                        font-size: 36px;
-                    }
-                }
-            }
+        &__main-header{
+            font-size: 55px;
+        }
+        &__under-header-line{
+            width: 240px;
         }
         &__button{
             display: inline-grid;
