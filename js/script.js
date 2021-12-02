@@ -48,17 +48,32 @@ $(document).ready(function () {
             $(this).addClass('change-product-style__button_activate').removeClass('change-product-style__button_deactivate');
 
             if ($('.everyday').hasClass('change-product-style__button_activate')) {
-                $('.catalog-card__everyday').addClass('catalog-card__everyday_activate').removeClass('catalog-card__everyday_deactivate')
-                $('.catalog-card__erotic').addClass('catalog-card__erotic_deactivate').removeClass('catalog-card__erotic_activate')
+                $('.everyday-card').addClass('everyday-card_activate').removeClass('everyday-card_deactivate')
+                $('.erotic-card').addClass('erotic-card_deactivate').removeClass('erotic-card_activate')
             } else {
-                $('.catalog-card__everyday').addClass('catalog-card__everyday_deactivate').removeClass('catalog-card__everyday_activate')
-                $('.catalog-card__erotic').addClass('catalog-card__erotic_activate').removeClass('catalog-card__erotic_deactivate')
+                $('.everyday-card').addClass('everyday-card_deactivate').removeClass('everyday-card_activate')
+                $('.erotic-card').addClass('erotic-card_activate').removeClass('erotic-card_deactivate')
             }
         })
     })
 
     //----------------catalog shift (erotic/everyday) - finish------------------//
 
+
+    //-------catalog shift (erotic/everyday) from promo button - start----------//
+    $('#promo_everyday_button').on('click', function () {
+        $('.everyday').addClass('change-product-style__button_activate').removeClass('change-product-style__button_deactivate')
+        $('.erotic').addClass('change-product-style__button_deactivate').removeClass('change-product-style__button_activate')
+        $('.everyday-card').addClass('everyday-card_activate').removeClass('everyday-card_deactivate')
+        $('.erotic-card').addClass('erotic-card_deactivate').removeClass('erotic-card_activate')
+    })
+    $('#promo_erotic_button').on('click', function () {
+        $('.erotic').addClass('change-product-style__button_activate').removeClass('change-product-style__button_deactivate')
+        $('.everyday').addClass('change-product-style__button_deactivate').removeClass('change-product-style__button_activate')
+        $('.erotic-card').addClass('erotic-card_activate').removeClass('erotic-card_deactivate')
+        $('.everyday-card').addClass('everyday-card_deactivate').removeClass('everyday-card_activate')
+    })
+    //-------catalog shift (erotic/everyday) from promo button - finish----------//
 
 
     //----------------choise product size and color - start------------------//
@@ -87,9 +102,8 @@ $(document).ready(function () {
             var $productPriceOld = $(this).parent().parent('.catalog-card').find('.catalog-card__price-old').text();
             var $productPriceNew = $(this).parent().parent('.catalog-card').find('.catalog-card__price-new').text();
 
-            $('.pop-up').css({
-                'display': 'grid',
-            });
+            $('.pop-up').removeClass('pop-up_deactivate').addClass('pop-up_activate')
+
             $('.pop-up__product-name').text($productName);
             $('.pop-up__product-img').attr("src", $productImage);
             $('.pop-up__price-old').text($productPriceOld);
@@ -97,9 +111,10 @@ $(document).ready(function () {
         })
     })
     $('.pop-up__product-close-button').on('click', function () {
-        $('.pop-up').css({
-            'display': 'none',
-        });
+        $('.pop-up').removeClass('pop-up_activate').addClass('pop-up_deactivate')
+    })
+    $('.pop-up__product-button-buy').on('click', function () {
+        alert('Благодарю за клик :-)')
     })
     //---------------------------pop-up - finish-----------------------------//
 

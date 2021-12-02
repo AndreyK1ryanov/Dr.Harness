@@ -28,9 +28,9 @@
                     <li class="header-menu-navigation__item"><a class="header-menu-navigation__link"
                             href="#anchor_catalog">КАТАЛОГ</a></li>
                     <li class="header-menu-navigation__item"><a class="header-menu-navigation__link"
-                            href="#anchor_info_block">ПРЕИМУЩЕСТВА</a></li>
+                            href="#anchor_benefits">ПРЕИМУЩЕСТВА</a></li>
                     <li class="header-menu-navigation__item"><a class="header-menu-navigation__link"
-                            href="#anchor_info_block-table">ОТЗЫВЫ</a></li>
+                            href="#anchor_size">РАЗМЕРЫ</a></li>
                     <li class="header-menu-navigation__item"><a class="header-menu-navigation__link"
                             href="#anchor_footer">КАК
                             ЗАКАЗАТЬ</a></li>
@@ -42,7 +42,7 @@
 
 
     <!-------------------------pop-up - start--------------------------->
-    <div class="pop-up">
+    <div class="pop-up pop-up_deactivate">
         <div class="pop-up__content">
             <div class="pop-up__image">
                 <img src="" alt="" class="pop-up__product-img">
@@ -96,9 +96,9 @@
                 <p class="promo__title">ЛЮБАЯ МОДЕЛЬ СО СКИДКОЙ 50%</p>
                 <p class="promo__title"><b>всего за <span>2990р.</span></b></p>
             </div>
-            <div class="promo__button">
-                <a href="#anchor_catalog" id="promo_everyday_button">ПОВСЕДНЕВНЫЕ ПОРТУПЕИ</a>
-                <a href="#anchor_catalog" id="promo_erotic_button">ЭРОТИЧЕСКИЕ ПОРТУПЕИ</a>
+            <div class="promo__button-block">
+                <a href="#anchor_catalog" class="promo__button" id="promo_everyday_button">ПОВСЕДНЕВНЫЕ ПОРТУПЕИ</a>
+                <a href="#anchor_catalog" class="promo__button" id="promo_erotic_button">ЭРОТИЧЕСКИЕ ПОРТУПЕИ</a>
             </div>
         </div>
     </div>
@@ -106,6 +106,7 @@
 
 
     <!-------------------------info_block - start--------------------------->
+    <div class="anchor" id="anchor_benefits"></div>
     <div class="info-block">
         <div class="info-block__container container">
             <div class="about-product">
@@ -123,7 +124,7 @@
                     раскрепощенных.</p>
                 <br>
             </div>
-
+            <div id="anchor_size"></div>
         </div>
         <div class="product-slider">
             <img class="product-slider__img" src="pictures/slider/slider_1.webp" alt="">
@@ -206,6 +207,7 @@
 
 
     <!-------------------------catalog - start--------------------------->
+    <div class="anchor" id="anchor_catalog"></div>
     <div class="catalog">
         <div class="catalog__container container">
             <h3 class="catalog__header header">КАТАЛОГ</h3>
@@ -217,7 +219,7 @@
                     ПОРТУПЕИ</button>
             </div>
             <div class="catalog__showcase">
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -244,7 +246,7 @@
                     </div>
                 </div>
 
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item2.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -271,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item3.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -297,7 +299,8 @@
                         <button class="catalog-card__buy-button">ЗАКАЗАТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -324,7 +327,7 @@
                     </div>
                 </div>
 
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item2.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -351,7 +354,7 @@
                     </div>
                 </div>
 
-                <div class="catalog-card catalog-card__everyday catalog-card__everyday_activate">
+                <div class="catalog-card everyday-card everyday-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item3.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -378,7 +381,7 @@
                     </div>
                 </div>
 
-                <div class="catalog-card catalog-card__erotic catalog-card__erotic_deactivate">
+                <div class="catalog-card erotic-card erotic-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -404,7 +407,8 @@
                         <button class="catalog-card__buy-button">ЗАКАЗАТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-card catalog-card__erotic catalog-card__erotic_deactivate">
+
+                <div class="catalog-card erotic-card erotic-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -430,7 +434,8 @@
                         <button class="catalog-card__buy-button">ЗАКАЗАТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-card catalog-card__erotic catalog-card__erotic_deactivate">
+
+                <div class="catalog-card erotic-card erotic-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -456,7 +461,8 @@
                         <button class="catalog-card__buy-button">ЗАКАЗАТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-card catalog-card__erotic catalog-card__erotic_deactivate">
+
+                <div class="catalog-card erotic-card erotic-card_activate">
                     <img class="catalog-card__img" src="pictures/catalog/catalog_item1.webp" alt="">
                     <span class="catalog-card__sale">53%</span>
                     <div class="catalog-card__name">
@@ -483,49 +489,47 @@
                     </div>
                 </div>
             </div>
-            <span id="anchor_footer"></span>
         </div>
     </div>
     <!-------------------------catalog - finish--------------------------->
 
 
     <!-------------------------footer - start--------------------------->
+    <div class="anchor" id="anchor_footer"></div>
     <div class="footer">
         <div class="footer__container container">
-            <div class="footer__header">
-                <h2>КАК ЗАКАЗАТЬ?</h2>
-                <hr>
-            </div>
+            <h2 class="footer__header header">КАК ЗАКАЗАТЬ?</h2>
+            <hr class="line-under-header">
             <div class="footer__content">
-                <div class="footer__item">
-                    <div class="footer-item__icon">
-                        <img src="pictures/icon/icon_1.webp" alt="">
+                <div class="item">
+                    <div class="item__background">
+                        <img class="item__img" src="pictures/icon/icon_1.webp" alt="">
                     </div>
-                    <div class="footer-item__title">
+                    <div class="item__title">
                         <p>Вы оформляете заказ на нашем сайте</p>
                     </div>
                 </div>
-                <div class="footer__item">
-                    <div class="footer-item__icon">
-                        <img src="pictures/icon/icon_2.webp" alt="">
+                <div class="item">
+                    <div class="item__background">
+                        <img class="item__img" src="pictures/icon/icon_2.webp" alt="">
                     </div>
-                    <div class="footer-item__title">
+                    <div class="item__title">
                         <p>Менеджр перезвонит для уточнения деталей заказа</p>
                     </div>
                 </div>
-                <div class="footer__item">
-                    <div class="footer-item__icon">
-                        <img src="pictures/icon/icon_3.webp" alt="">
+                <div class="item">
+                    <div class="item__background">
+                        <img class="item__img" src="pictures/icon/icon_4.webp" alt="">
                     </div>
-                    <div class="footer-item__title">
+                    <div class="item__title">
                         <p>В блежайшее время отправляем ваш заказ</p>
                     </div>
                 </div>
-                <div class="footer__item">
-                    <div class="footer-item__icon">
-                        <img src="pictures/icon/icon_4.webp" alt="">
+                <div class="item">
+                    <div class="item__background">
+                        <img class="item__img" src="pictures/icon/icon_4.webp" alt="">
                     </div>
-                    <div class="footer-item__title">
+                    <div class="item__title">
                         <p>Вы оплачиваете заказ при получении</p>
                     </div>
                 </div>
