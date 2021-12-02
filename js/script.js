@@ -62,17 +62,17 @@ $(document).ready(function () {
 
 
     //----------------choise product size and color - start------------------//
-    $('.catalog-card__size button').each(function () {
+    $('.catalog-card__size-pick').each(function () {
         $(this).on('click', function () {
-            $('.catalog-card__size button').removeClass()
-            $(this).addClass('catalog-card__size-select')
+            $('.catalog-card__size-pick').removeClass('catalog-card__size-pick_select')
+            $(this).addClass('catalog-card__size-pick_select')
         })
     })
 
-    $('.catalog-card__color button').each(function () {
+    $('.catalog-card__color-pick').each(function () {
         $(this).on('click', function () {
-            $('.catalog-card__color button').removeClass('catalog-card__color-select')
-            $(this).addClass('catalog-card__color-select')
+            $('.catalog-card__color-pick').removeClass('catalog-card__color-pick_select')
+            $(this).addClass('catalog-card__color-pick_select')
         })
     })
     //----------------choise product size and color - finish------------------//
@@ -82,18 +82,18 @@ $(document).ready(function () {
     //---------------------------pop-up - start-----------------------------//
     $('.catalog-card').find('.catalog-card__buy-button').each(function () {
         $(this).on('click', function () {
-            var $productName = $(this).parent('.catalog-card').find('.catalog-card__name p').text()
-            var $productImage = $(this).parent('.catalog-card').find('.catalog-card__img img').attr("src");
-            var $productPriceOld = $(this).parent('.catalog-card').find('.catalog-card__price-old').text();
-            var $productPriceNew = $(this).parent('.catalog-card').find('.catalog-card__price-new').text();
+            var $productName = $(this).parent().parent('.catalog-card').find('.catalog-card__name').text()
+            var $productImage = $(this).parent().parent('.catalog-card').find('.catalog-card__img').attr("src");
+            var $productPriceOld = $(this).parent().parent('.catalog-card').find('.catalog-card__price-old').text();
+            var $productPriceNew = $(this).parent().parent('.catalog-card').find('.catalog-card__price-new').text();
 
             $('.pop-up').css({
                 'display': 'grid',
             });
             $('.pop-up__product-name').text($productName);
-            $('.pop-up__image img').attr("src", $productImage);
-            $('.pop-up__product-price_old').text($productPriceOld);
-            $('.pop-up__product-price_new').text($productPriceNew);
+            $('.pop-up__product-img').attr("src", $productImage);
+            $('.pop-up__price-old').text($productPriceOld);
+            $('.pop-up__price-new').text($productPriceNew);
         })
     })
     $('.pop-up__product-close-button').on('click', function () {
