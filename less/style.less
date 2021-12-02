@@ -452,30 +452,7 @@ button, a{
 
 //-----------------------------catalog - start------------------------//
 .catalog{
-    padding-bottom: 90px;
-    &__header{
-        padding-bottom: 30px;
-    }
-    &__top_nav{
-        text-align: center;
-        padding-bottom: 30px;
-        .active{
-            padding: 20px 30px;
-            background: @accentPink;
-            border: none;
-            color: @wordWhite;
-            font-size: 18px;
-        }
-        .non-active{
-            padding: 20px 30px;
-            background: #F3F3F3;
-            border: none;
-            color: @wordBlack;
-            font-size: 18px;
-        }
-    }
-
-    &__content{
+    &__showcase{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
@@ -484,11 +461,21 @@ button, a{
     &-card{
         position: relative;
         border: 1px solid #DBDBDF;
-        &__every_day{
-            display: block;
+        &__everyday{
+            &_activate{
+                display: block;
+            }
+            &_deactivate{
+                display: none;
+            }
         }
         &__erotic{
-            display: none;
+            &_activate{
+                display: block;
+            }
+            &_deactivate{
+                display: none;
+            }
         }
         &__img{
             img{
@@ -585,6 +572,23 @@ button, a{
                 border-bottom: 4px solid #264792;
                 box-shadow: 0px 5px 20px -9px #264792;
             }
+        }
+    }
+}
+.change-product-style{
+    text-align: center;
+    padding: 30px 0px;
+    &__button{
+        padding: 20px 30px;
+        border: none;
+        font-size: 18px;
+        &_activate{
+            background: @accentPink;
+            color: @wordWhite;
+        }
+        &_deactivate{
+            background: #F3F3F3;
+            color: @wordBlack;
         }
     }
 }

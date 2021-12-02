@@ -42,28 +42,21 @@ $(document).ready(function () {
 
 
     //----------------catalog shift (erotic/everyday) - start------------------//
-    $('.catalog__top_nav button').each(function () {
+    $('.change-product-style__button').each(function () {
         $(this).on('click', function () {
-            $('.catalog__top_nav button').removeClass('active').addClass('non-active')
-            $(this).addClass('active').removeClass('non-active');
+            $('.change-product-style__button').removeClass('change-product-style__button_activate').addClass('change-product-style__button_deactivate')
+            $(this).addClass('change-product-style__button_activate').removeClass('change-product-style__button_deactivate');
 
-            if ($('#every_day_button').hasClass('active')) {
-                $('.catalog-card__every_day').css({
-                    'display': 'block',
-                });
-                $('.catalog-card__erotic').css({
-                    'display': 'none',
-                });
+            if ($('.everyday').hasClass('change-product-style__button_activate')) {
+                $('.catalog-card__everyday').addClass('catalog-card__everyday_activate').removeClass('catalog-card__everyday_deactivate')
+                $('.catalog-card__erotic').addClass('catalog-card__erotic_deactivate').removeClass('catalog-card__erotic_activate')
             } else {
-                $('.catalog-card__every_day').css({
-                    'display': 'none',
-                });
-                $('.catalog-card__erotic').css({
-                    'display': 'block',
-                });
+                $('.catalog-card__everyday').addClass('catalog-card__everyday_deactivate').removeClass('catalog-card__everyday_activate')
+                $('.catalog-card__erotic').addClass('catalog-card__erotic_activate').removeClass('catalog-card__erotic_deactivate')
             }
         })
     })
+
     //----------------catalog shift (erotic/everyday) - finish------------------//
 
 
