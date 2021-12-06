@@ -6,10 +6,10 @@ RU /
 В графическом плане не самый пестрый проект, но мне кажется он достоин внимания так как демонстрирует мои способности создания скриптов. 
 
 При создании использовались: 
-LESS - в качестве CSS препроцессора 
-jQuery - для упрощения работы с JS 
-Slick Slider - карусель изображений 
-BEM - методология 
+* LESS - в качестве CSS препроцессора 
+* jQuery - для упрощения работы с JS 
+* Slick Slider - карусель изображений 
+* BEM - методология 
 
 Верстка полностью валидна, поддерживает все популярные браузеры и платформы. 
 
@@ -21,9 +21,9 @@ There were many mistakes in the template, including spelling ones, so we had to 
 Graphically, not the most colorful project, but I think it is worthy of attention as it demonstrates my ability to create scripts.
 
 When creating were used:
-LESS - as a CSS preprocessor
-jQuery - to make it easier to work with JS
-Slick Slider - carousel of images
-BEM - methodology
+* LESS - as a CSS preprocessor
+* jQuery - to make it easier to work with JS
+* Slick Slider - carousel of images
+* BEM - methodology
 
 The layout is fully valid, supports all popular browsers and platforms.
